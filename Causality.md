@@ -12,6 +12,12 @@
 > This mere statistical coincidence shows that just because two variables are correlated does not mean one causes the other and vice versa. For that reason, the ice cream sales and murder rates example demonstrates how the direction of causality would be ambiguous.
 
 
-**Reference:**
+**References:**
+
 Albright, S. and Winston, W. (2017). Business Analytics: Data Analysis & Decision 
   Making. 6th ed. Boston, MA: Cengage Learning, pp. 419, 430-431.
+
+Peters, J. (2013). When Ice Cream Sales Rise, So Do Homicides. Coincidence, or Will 
+ Your Next Cone Murder You?. [online] Slate Magazine. Available at: 
+ https://slate.com/news-and-politics/2013/07/warm-weather-homicide-rates-when-ice-
+ cream-sales-rise-homicides-rise-coincidence.html [Accessed 14 Jan. 2020].
