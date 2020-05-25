@@ -19,5 +19,4 @@ Albright, S. and Winston, W. (2017). Business Analytics: Data Analysis & Decisio
 
 Peters, J. (2013). When Ice Cream Sales Rise, So Do Homicides. Coincidence, or Will 
  Your Next Cone Murder You?. [online] Slate Magazine. Available at: 
- https://slate.com/news-and-politics/2013/07/warm-weather-homicide-rates-when-ice-
- cream-sales-rise-homicides-rise-coincidence.html [Accessed 14 Jan. 2020].
+ https://slate.com/news-and-politics/2013/07/warm-weather-homicide-rates-when-ice-cream-sales-rise-homicides-rise-coincidence.html [Accessed 14 Jan. 2020].
