@@ -38,6 +38,8 @@ With this information in mind, I have created a table with the probabilities of 
 
 In addition to the table, I have constructed a probability tree with the likelihoods of the rejects and accepts given unhealthy and healthy labels. Something to pay attention to is that Event A is the delivery has an unhealthy label and Event B is that the delivery is rejected.
 
+![alt_text](https://github.com/madisontagg/Data-Analytics-Durham/blob/master/QuestionIIIProbTree.png)
+
 Unfortunately, to calculate the probability that the delivery is from an unhealthy supplier given that the delivery is rejected, P(A|B), cannot be performed using the table or probability tree. This is because P(A|B) has to take into account the true rejections, P(B|A), as well as the false rejections, P(B|¯A). Thus, to calculate P(A|B) has to be done using Bayes’ Theorem:
 
 $$ P(A│B)  =  (P(B|A)∙P(A)) / (P(B)) $$
@@ -53,69 +55,69 @@ $$ P(Unhealthy│Reject)= (P(Reject│Unhealthy)∙P(Unhealthy))/(P(Reject│Unh
 
 Before we put together the final calculation, here are the individual calculations for each probability:
 	
-![alt text] ** QuestionIIIProbTree **
+![alt text](https://github.com/madisontagg/Data-Analytics-Durham/blob/master/QuestionIIICalculations.png)
 
 Using the calculations in the table above and substituting them into Bayes’ Theorem, the final probability calculation of P(Unhealthy | Reject) or P(A|B) is the following:
 
-P(Unhealthy│Reject)=  0.00425/(0.00425+0.0995)=  0.00425/0.10375=0.04095 ≈0.041
+![alt_text](https://github.com/madisontagg/Data-Analytics-Durham/blob/master/QuestionIIIFinalCalc.png)
 
 In conclusion, the probability that the delivery is from an unhealthy supplier given that the delivery has been rejected is approximately 4.1%.
 
 
 ## Question IV.
 
+![alt_text](https://github.com/madisontagg/Data-Analytics-Durham/blob/master/QuestionIVVisual.png)
+
 By observing the data points in the scatterplot above, one can observe that a high amount of motors are returned if inspection costs are too low or too high. Unfortunately, the manger cannot make strong conclusions by just observing the data points with the scatterplot because the graph does not quantify the relationship between the two variables, the Inspection expenditures and motors returned. This is where a simple linear regression can help quantify the relationship where there is a single explanatory variable. The steps that were taken to construct this linear regression are the following:
 
-Drawing a scatterplot is a good way to begin the linear regression analysis. The scatterplot is a graphical plot of two variables, x and y. The x-variable, also known as the independent or explanatory variable, will be the inspection expenditures. The y-variable, also known as the dependent or response variable, will be the number of motors returned. 
-	After selecting both of the columns, within the Excel spreadsheet, that contains both the x and y variables, I inserted the scatterplot. 
-	Next, I was able to add a chart element under Chart Design, which was a linear treadline. This is where the least-squares line is constructed: a straight line is fitted in the scatterplot that “minimizes the sum of squared residuals” (Albright and Winston, 2017). A residual is a difference between the actual and fitted values of the dependent variable, the number of motors returned (Albright and Winston, 2017). Therefore, the fundamental equation for regression is:
-observed value=fitted value+residual
-	The linear treadline, also known as the least-squares line, is calculated by an equation containing the slope and the y-intercept. 
-	The equation for the slope is: b=  (Σ(X_i-¯X)(Y_i-¯Y))/〖Σ(X_i-¯X)〗^2  = r_XY  S_Y/S_X 
-	The equation for the y-intercept is: a= ¯Y-b¯X 
-	With the help of Excel, the formulated simple linear regression equation is:
-	 y=-0.00002x+66.476.  
+- Drawing a scatterplot is a good way to begin the linear regression analysis. The scatterplot is a graphical plot of two variables, x and y. The x-variable, also known as the independent or explanatory variable, will be the inspection expenditures. The y-variable, also known as the dependent or response variable, will be the number of motors returned.
+- After selecting both of the columns, within the Excel spreadsheet, that contains both the x and y variables, I inserted the scatterplot.
+- Next, I was able to add a chart element under Chart Design, which was a linear treadline. This is where the least-squares line is constructed: a straight line is fitted in the scatterplot that “minimizes the sum of squared residuals” (Albright and Winston, 2017). A residual is a difference between the actual and fitted values of the dependent variable, the number of motors returned (Albright and Winston, 2017). Therefore, the fundamental equation for regression is:
+$$ observed value = fitted value + residual $$
 
- 
+- The linear treadline, also known as the least-squares line, is calculated by an equation containing the slope and the y-intercept. 
+
+![alt_text](https://github.com/madisontagg/Data-Analytics-Durham/blob/master/QuestionIVEquation.png)
+
+- With the help of Excel, the formulated simple linear regression equation is:
+
+$$ y=-0.00002x + 66.476 $$
+
+ ![alt_text](https://github.com/madisontagg/Data-Analytics-Durham/blob/master/QuestionIVVisual2.png)
 
 The simple linear regression equation contains two important features where the manager can draw conclusions from are the y-intercept and slope. The y-intercept allows the manager to interpret how many motors will be returned when the inspections costs are $0. The y-intercept = 66.476 so therefore, when inspections costs are $0, the manager can predict approximately 66.5 motors to be returned. Importantly, this demonstrates that no matter the inspection costs, there will still be motor returns. The slope allows the manager to interpret the rate at which the motors are being returned at per inspection dollar spent. The slope = -0.00002 so therefore, every dollar spent on an inspection there will be a 0.00002 decrease in the amount of motors returned. Overall, the slope is negative which concludes that as inspection expenditure increases, the number of motors returned will decrease.
 
-       
+![alt_text](https://github.com/madisontagg/Data-Analytics-Durham/blob/master/QuestionIVRegression.png)
 
+The R-Square value, R^2, of this linear regression model is 0.01798. R-Square is also known as the coefficient of determination, which is a statistical measurement of how close the datapoints are to the fitted to the least squares line of the regression.  The R-Square value is calculated using the formula: 
 
-	The R-Square value, R^2, of this linear regression model is 0.01798. R-Square is also known as the coefficient of determination, which is a statistical measurement of how close the datapoints are to the fitted to the least squares line of the regression.  The R-Square value is calculated using the formula: 
-R^2=1-  (Σe_i^2)/〖Σ(Y_i-  ¯Y)〗^2  . 
+![alt_text](https://github.com/madisontagg/Data-Analytics-Durham/blob/master/QuestionIVRsquare.png)
 
 Specifically, in simple linear regressions, the R-Square value is the square of the correlation between the dependent variable, number of motors returned, and explanatory variable, inspection expenditures. The R-Square value is always between 0 and 1; the closer to 1, the better the fit. In this problem, the R-Square value is 0.018 which is closer to 0 than it is to 1; therefore, the linear regression of this dataset is poorly fitted. This can also be seen in the residual lot as well as it shows the linear regression “systematically over and under-predicts the data at different points along the curve” (Rieuf, 2017). The Standard Error of Estimate, Se, of the regression model is 1.4495 motors returned. The Se, essentially standard deviation of the residuals, indicates the level of accuracy of predictions made from the regression equation. The Se can be measured with the formula:
 
-S_e= √((Σe_i^2)/(n-2)) .
+![alt_text](https://github.com/madisontagg/Data-Analytics-Durham/blob/master/QuestionIVSD.png)
 
 While 1.45 seems like a smaller number, a standard error of 1.45 models returned is quite large with a dataset’s range between 64 and 68 motors returned. This can conclude that the predictions based on the linear regression model of electric motors returned based on inspection costs are not accurate. 
 
 
 
-Question V.        
+## Question V.        
 
-	The most representative average commute time for individuals living in London metropolitan area is approximately 42.65 minutes. Assuming that this sample is a portion of the whole population and randomly selected, then in theory, a sample mean can be used as a measure of central tendency. Unfortunately, the distribution of the data is skewed which means the measure of central tendency for this problem is the median. The median is calculated by sorting the data from smallest to largest and selecting the middle observation:
-
-30.5	32.9	33.3	33.6	34.9	35.1	36	36.6	37.5	37.5
-37.6	38	38.8	39.6	40.8	41.6	41.7	41.9	42.3	42.4
-42.9	43.2	43.8	43.9	44.1	45.4	46.5	46.6	47.3	47.6
-47.7	48.1	49.1	49.5 	49.9	52.5	52.8	56.9	58.6	62.5
+	The most representative average commute time for individuals living in London metropolitan area is approximately 42.65 minutes. Assuming that this sample is a portion of the whole population and randomly selected, then in theory, a sample mean can be used as a measure of central tendency. Unfortunately, the distribution of the data is skewed which means the measure of central tendency for this problem is the median. The median is calculated by sorting the data from smallest to largest and selecting the middle observation.
 
 With a sample of 40 commuters, the middle observation is defined as the average of the two middle observations due to an even sample size. In this case, the average between 42.4 and 42.9. Therefore, the final calculation is:
-median=  ((42.4+42.9))/2=42.65
+
+$$ median=  ((42.4+42.9))/2 = 42.65 $$ 
 	
 This can also be calculated by selecting the data and using Excel’s MEDIAN function.
 
+![alt_text](https://github.com/madisontagg/Data-Analytics-Durham/blob/master/QuestionVVisual.png)
 
-       
+Looking at the histogram above, it appears that the distribution of average commute time is not approximately symmetric. In addition to the histogram, the descriptive statistics area of the Data Analysis Toolpak demonstrates the calculated skewness in the formulated table above. In general, this is what skewness means when it come to the distribution:
 
-
-	Looking at the histogram above, it appears that the distribution of average commute time is not approximately symmetric. In addition to the histogram, the descriptive statistics area of the Data Analysis Toolpak demonstrates the calculated skewness in the formulated table above. In general, this is what skewness means when it come to the distribution:
-	If skewness is negative, the distribution is skewed to the left.
-	If skewness is positive, the distribution is skewed to the right.
-	If the skewness is approximately zero, the distribution is symmetric/normal.
+- If skewness is negative, the distribution is skewed to the left.
+- If skewness is positive, the distribution is skewed to the right.
+- If the skewness is approximately zero, the distribution is symmetric/normal.
 
 Because the skewness is approximately 0.57, then the distribution of average commute time is skewed to the right. For a distribution to be skewed to the right, the mean should be greater than the median. The mean and median calculations for this dataset can be seen in the table below:
 
@@ -124,23 +126,29 @@ Mean	43.3
 
 As we can see, the mean is greater than the median, therefore, the distribution of average commute time is skewed to the right. Another way to see that this dataset is not a symmetric distribution is introducing the technique of using minimum, maximum, percentiles and quartiles.
 
-
+![alt_text](https://github.com/madisontagg/Data-Analytics-Durham/blob/master/QuestionVVisual2.png)
        
-	
 Quartiles divide the data into four groups, with approximately a quarter of all observations within each of the quartiles. A boxplot is constructed according to these four quartiles from this dataset and here are the steps to constructing such a boxplot (Support.office.com, 2013):
-	Calculate quartile values (seen in the table above): 
-	minimum value, first quartile, median value, third quartile, maximum value.
-	Calculate quartile differences:
-	First quartile – minimum value
-	Median value – first quartile
-	Third quartile – median value
-	Maximum value – third quartile
-	Using these differences, I used Excel’s stacked column design.
-	Next, the topmost box and bottom box are turned into whiskers. The middle two quartile boxes are turned into the same color and thus creating the final product of the constructed boxplot.
+
+Calculate quartile values (seen in the table above): 
+- minimum value, first quartile, median value, third quartile, maximum value.
+  
+Calculate quartile differences:
+ - First quartile – minimum value
+ - Median value – first quartile
+ - Third quartile – median value
+ - Maximum value – third quartile
+ - Using these differences, I used Excel’s stacked column design.
+
+Next, the topmost box and bottom box are turned into whiskers. The middle two quartile boxes are turned into the same color and thus creating the final product of the constructed boxplot.
+
 The interquartile range (IQR) is represented as the light blue box and contains the middle 50% of the data. The line in the middle of the IQR represents the median, the middle observation of the sorted dataset. The green dot in the boxplot represents the mean of the dataset. In the boxplot, the green dot is above the middle line, meaning the value of the green dot is greater than the middle line. Thus, the mean is greater than the median. This concludes that the distribution average commute times is positively skewed as the mean is greater than the median. Therefore, with the help of Toolpak’s descriptive statistic skewness feature and boxplot’s interquartile range, the average commute time is not approximately symmetric.
 
 
-Bibliography:
+
+
+
+### Bibliography:
 
 Albright, S. and Winston, W. (2017). Business Analytics: Data Analysis & Decision Making. 6th ed. 
 Boston, MA: Cengage Learning, pp. 419, 430-431.
@@ -163,4 +171,4 @@ Statistics. [online] Available at: https://statistics.laerd.com/statistical-guid
 
 Support.office.com. (2013). Create a box plot. [online] Available at: https://support.office.com/en-
 gb/article/create-a-box-plot-10204530-8cdf-40fe-a711-2eb9785e510f [Accessed 15 Jan. 2020].
-![image](https://github.com/user-attachments/assets/7352f905-05d9-477e-85ac-76eff99dc821)
+
