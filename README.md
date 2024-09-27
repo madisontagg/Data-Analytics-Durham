@@ -16,67 +16,44 @@ This mere statistical coincidence shows that just because two variables are corr
 ## Question II.
 Given the number of cars per 1000 people is known for virtually every country in the world, there are many countries, however, where per capita income is unknown. To go about estimating per capita income for these countries, we first have to understand what per capita income is. Per capita income is “a measure of the amount of money earned per person in a nation or geographic region” (Kenton, 2019). Per capita income can also be used to determine an area’s standard of living or quality of life. This is the calculation:
 
-per capita income = (country's national income)/(country^' s population)
+$$ per capita income = (country's national income)/(country's population) $$
 
 The next step of estimating per capita income for countries where it is unknown is to understand what information is already given; which is, the number of cars per 1000 people for the country. This can be represented with the formula:
 
-ratio =  ((total number of cars in country)/(country's population))∙1000
+$$ ratio =  ((total number of cars in country)/(country's population))∙1000 $$
 
 With both of these formulas in mind, we are also told that “for many” countries, per capita income is unknown; therefore, there are some countries where per capita income is known. Using the values of cars per 1000 people as the x-variable, explanatory and independent variable, and the values of per capita income for the known counties as the y-variable, response and dependent variable, one can create a scatterplot. After building the scatterplot, regression analysis can be used to see if there is a linear relationship between the two variables, cars per 100 people and per capita income. If there is a linear relationship, then a least-square line can be fitted to the scatterplot based on minimizing the distance from the points to the line. This least-squares estimation can help predict and estimate per capita income for countries where it is unknown based on the known values of cars per 1000 people with the country.
 
 
 
 
-Question III.
-
+## Question III.
 Yes, as the procurement manager of the company, it is possible to calculate the probability that the delivery is from an unhealthy supplier given that it is rejected. The first step of this calculation is to examine what information is given to us.
 	The probability of an “unhealthy supplier” that produces a certain amount of defective hi-tech component is computed as 0.5%.
 	If the supplier is labeled unhealthy, the probability of rejecting the delivery is 85%.
 	If the supplier is labeled healthy, the probability of rejecting the delivery is 10%.
 With this information in mind, I have created a table with the probabilities of true rejects, false rejects, true accepts, and false accepts of deliveries based on healthy and unhealthy labels.
 
-	Unhealthy Label (0.5%)	Healthy Label (99.5%)
-Rejecting	True Reject
-0.005 x 0.85 = 0.00425	False Reject
-.995 x 0.1 = 0.0995
-Accepting	False Accept
-0.05 x 0.15 = 0.0075	True Accept
-.995 x 0.9 = 0.8955
+![alt text](https://github.com/madisontagg/Data-Analytics-Durham/blob/master/QuestionIIIProbabilities)
 
 In addition to the table, I have constructed a probability tree with the likelihoods of the rejects and accepts given unhealthy and healthy labels. Something to pay attention to is that Event A is the delivery has an unhealthy label and Event B is that the delivery is rejected.
 
-
-
-
-
-
-
-
-
-
-
 Unfortunately, to calculate the probability that the delivery is from an unhealthy supplier given that the delivery is rejected, P(A|B), cannot be performed using the table or probability tree. This is because P(A|B) has to take into account the true rejections, P(B|A), as well as the false rejections, P(B|¯A). Thus, to calculate P(A|B) has to be done using Bayes’ Theorem:
-P(A│B)  =  (P(B|A)  ∙ P(A))/(P(B)) 
+
+$$ P(A│B)  =  (P(B|A)∙P(A)) / (P(B)) $$
 
 This what each part of the theorem means in correlation to the problem:
-	P(B|A), the probability that the delivery is rejected given that it is has an unhealthy label.
-	P(A), the probability that the delivery has an unhealthy label.
-	P(B), the probability that the delivery is rejected. This is a mutually exclusive event meaning that it has to take into account the delivery being rejected from with a unhealthy label and with a healthy label. Thus the denominator turns into: P(B|A) ∙ P(A) + P(B|¯A) ∙ P(¯A).
+- P(B|A), the probability that the delivery is rejected given that it is has an unhealthy label.
+- P(A), the probability that the delivery has an unhealthy label.
+- P(B), the probability that the delivery is rejected. This is a mutually exclusive event meaning that it has to take into account the delivery being rejected from with a unhealthy label and with a healthy label. Thus the denominator turns into: P(B|A) ∙ P(A) + P(B|¯A) ∙ P(¯A).
 
 Thus, I have substituted Bayes’ Theorem with the variables in question:
 
-P(Unhealthy│Reject)=(P(Reject│Unhealthy)∙P(Unhealthy))/(P(Reject│Unhealthy)∙P(Unhealthy)+P(Reject│Healthy)∙P(Healthy))
+$$ P(Unhealthy│Reject)= (P(Reject│Unhealthy)∙P(Unhealthy))/(P(Reject│Unhealthy)∙P(Unhealthy)+P(Reject│Healthy)∙P(Healthy)) $$
 
 Before we put together the final calculation, here are the individual calculations for each probability:
 	
-		Calculations:
-P(Reject | Unhealthy)	P(B|A)	0.85
-P(Unhealthy)	P(A)	0.005
-P(Reject | Healthy)	P(B|¯A)	0.10
-P(Healthy)	P(¯A)	0.995
-P(Reject | Unhealthy) ∙ P(Unhealthy)	P(B|A) ∙ P(A)	0.85 ∙ 0.005 = 0.00425
-P(Reject | Healthy) ∙ P(Healthy)	P(B|¯A) ∙ P(¯A)	0.10 ∙ 0.995 = 0.0995
-P(Reject | Unhealthy) ∙ P(Unhealthy) + P(Reject | Healthy) ∙ P(Healthy)	P(B|A) ∙ P(A) + P(B|¯A) ∙ P(¯A)	0.00425 + 0.0995 = 0.10375
+![alt text] ** QuestionIIIProbTree **
 
 Using the calculations in the table above and substituting them into Bayes’ Theorem, the final probability calculation of P(Unhealthy | Reject) or P(A|B) is the following:
 
@@ -85,17 +62,11 @@ P(Unhealthy│Reject)=  0.00425/(0.00425+0.0995)=  0.00425/0.10375=0.04095 ≈0.
 In conclusion, the probability that the delivery is from an unhealthy supplier given that the delivery has been rejected is approximately 4.1%.
 
 
+## Question IV.
 
+By observing the data points in the scatterplot above, one can observe that a high amount of motors are returned if inspection costs are too low or too high. Unfortunately, the manger cannot make strong conclusions by just observing the data points with the scatterplot because the graph does not quantify the relationship between the two variables, the Inspection expenditures and motors returned. This is where a simple linear regression can help quantify the relationship where there is a single explanatory variable. The steps that were taken to construct this linear regression are the following:
 
-
-
-
-Question IV.
-
- 
-
-	By observing the data points in the scatterplot above, one can observe that a high amount of motors are returned if inspection costs are too low or too high. Unfortunately, the manger cannot make strong conclusions by just observing the data points with the scatterplot because the graph does not quantify the relationship between the two variables, the Inspection expenditures and motors returned. This is where a simple linear regression can help quantify the relationship where there is a single explanatory variable. The steps that were taken to construct this linear regression are the following:
-	Drawing a scatterplot is a good way to begin the linear regression analysis. The scatterplot is a graphical plot of two variables, x and y. The x-variable, also known as the independent or explanatory variable, will be the inspection expenditures. The y-variable, also known as the dependent or response variable, will be the number of motors returned. 
+Drawing a scatterplot is a good way to begin the linear regression analysis. The scatterplot is a graphical plot of two variables, x and y. The x-variable, also known as the independent or explanatory variable, will be the inspection expenditures. The y-variable, also known as the dependent or response variable, will be the number of motors returned. 
 	After selecting both of the columns, within the Excel spreadsheet, that contains both the x and y variables, I inserted the scatterplot. 
 	Next, I was able to add a chart element under Chart Design, which was a linear treadline. This is where the least-squares line is constructed: a straight line is fitted in the scatterplot that “minimizes the sum of squared residuals” (Albright and Winston, 2017). A residual is a difference between the actual and fitted values of the dependent variable, the number of motors returned (Albright and Winston, 2017). Therefore, the fundamental equation for regression is:
 observed value=fitted value+residual
