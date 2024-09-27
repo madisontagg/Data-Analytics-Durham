@@ -1,7 +1,7 @@
 MSc Business Analytics
 Data Analytics in Action
 
-## Question I.
+### Question I.
 Part I: Given that X and Y are related and have no idea which way the causality goes, there is no valid way to find the causality between the variables. The main reason why we can’t say X causes Y or Y causes X is due to the common saying that ‘correlation does not imply causation’. To dive deeper into the meaning of this saying, one must understand the difference between the terms. Correlation is a statistical measurement that indicates the strength of a linear relationship between a pair of variables (Albright and Winston, 2017). In this question, we are told that X and Y are related meaning that some sort of correlation exists between the two variables, but not the why and how the relationship unfolded. Causation, on the other hand, is similar to the idea of cause and effect. Causality between two variables argues that any change to a value of one variable will cause a change in the value of the other variable. With the given information, there lacks evidence that if a value of the x-variable is changed that the value in y-variable will also change and vise versa. As far as regression analysis goes, there are “two potential objective of regression analysis: to understand how the world operates and to make predictions” (Albright and Winston, 2017). Even with successfully regressing Y on X and then X on Y, will only construct information on how strong of predictions we can make of one variable based on a single explanatory variable. Comparing this to the idea of causality, regression analysis is a technique where one can predict values based on a single explanatory variable, therefore, it does not give any valid explanation whether or not a variable causes another variable. In conclusion, neither X causes Y nor Y causes X. This cannot be seen by regression analysis between the two variables because regression predictions are different from true causation. 
 
 Part II: There is a classic example where the direction of causality would be ambiguous due to the idea that ‘correlation does not imply causation’. This example is the correlation between ice cream sales and the rate of murders. While one is a dessert and one is a violent crime, “summer is when people get together. More specifically, casual drinkers and drug users are more likely to go to bars or parties on weekends and evenings, as opposed to a Tuesday morning. These people in the social mix, flooding the city’s streets and neighborhood bars, feed the peak times for murder, experts say” (Peters, 2013).  Summer is also known as the peak time of ice cream sales. Thus, one can argue that ice cream sales and murder rates are correlated. This is a prime example of how the direction of causality would be ambiguous:
@@ -13,7 +13,7 @@ This mere statistical coincidence shows that just because two variables are corr
 
 
 
-## Question II.
+### Question II.
 Given the number of cars per 1000 people is known for virtually every country in the world, there are many countries, however, where per capita income is unknown. To go about estimating per capita income for these countries, we first have to understand what per capita income is. Per capita income is “a measure of the amount of money earned per person in a nation or geographic region” (Kenton, 2019). Per capita income can also be used to determine an area’s standard of living or quality of life. This is the calculation:
 
 $$ per capita income = (country's national income)/(country's population) $$
@@ -27,7 +27,7 @@ With both of these formulas in mind, we are also told that “for many” countr
 
 
 
-## Question III.
+### Question III.
 Yes, as the procurement manager of the company, it is possible to calculate the probability that the delivery is from an unhealthy supplier given that it is rejected. The first step of this calculation is to examine what information is given to us.
 	The probability of an “unhealthy supplier” that produces a certain amount of defective hi-tech component is computed as 0.5%.
 	If the supplier is labeled unhealthy, the probability of rejecting the delivery is 85%.
@@ -64,7 +64,7 @@ Using the calculations in the table above and substituting them into Bayes’ Th
 In conclusion, the probability that the delivery is from an unhealthy supplier given that the delivery has been rejected is approximately 4.1%.
 
 
-## Question IV.
+### Question IV.
 
 ![alt_text](https://github.com/madisontagg/Data-Analytics-Durham/blob/master/QuestionIVVisual.png)
 
@@ -101,7 +101,7 @@ While 1.45 seems like a smaller number, a standard error of 1.45 models returned
 
 
 
-## Question V.        
+### Question V.        
 
 	The most representative average commute time for individuals living in London metropolitan area is approximately 42.65 minutes. Assuming that this sample is a portion of the whole population and randomly selected, then in theory, a sample mean can be used as a measure of central tendency. Unfortunately, the distribution of the data is skewed which means the measure of central tendency for this problem is the median. The median is calculated by sorting the data from smallest to largest and selecting the middle observation.
 
@@ -148,7 +148,7 @@ The interquartile range (IQR) is represented as the light blue box and contains 
 
 
 
-### Bibliography:
+#### Bibliography:
 
 Albright, S. and Winston, W. (2017). Business Analytics: Data Analysis & Decision Making. 6th ed. 
 Boston, MA: Cengage Learning, pp. 419, 430-431.
